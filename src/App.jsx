@@ -14,26 +14,35 @@ import Technologies from "./components/Technologies.jsx"
 
 function App() {
 
+  const specification = {
+    language: "JavaScript",
+    type:"Frontend"
+  };
+
+  const features = [
+    {
+      comps: "Komponenty",
+    },
+    {
+      jsx:"JSX",
+    },
+    {
+      props:"props"
+    }
+  ];
+
   return (
     <>
     
     <Header/>
-    <Navigation/>
-    <CourseCard/>
-    <main>
-        <Technology/>
-        <Student/>
-        <InfoBox/>
-        <Technologies/>
-    </main>
-
-
-    <Footer/>
-    <Footer/>
+    <br/>
+        <Technology name="React" category="frontend" hours={125} specyfikacja={specification} features={features}/>
+        <Technology name="PHP" category="backend" hours={200} specyfikacja={specification} features={features}/>
+        <Technology name="JavaScript" category="frontend" hours={150} specyfikacja={specification} features={features}/>
+        <Technology name="Angular" category="fromntend" hours={167} specyfikacja={specification} features={features}/>
+        <Technology name="MySQL" category="backend" hours={195} specyfikacja={specification} features={features}/>
     </>
   )
 }
-
-
 
 export default App
