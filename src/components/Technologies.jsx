@@ -1,6 +1,17 @@
-function Technologies(){
+function Technology({ id, name, category, hours }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>ID: {id}</p>
+      <p>Nazwa: {name}</p>
+      <p>Kategoria: {category}</p>
+      {hours && <p>Liczba godzin: {hours}</p>}
+    </div>
+  );
+}
 
-    const technologies = [
+function Technologies() {
+  const technologies = [
     {
       id: 1,
       name: "React",
@@ -16,29 +27,35 @@ function Technologies(){
       name: "HTML",
       category: "Frontend",
     },
+    {
+      id: 4,
+      name: "Express",
+      category: "Backend",
+      hours: 25
+    },
+    {
+      id: 5,
+      name: "MongoDB",
+      category: "Baza danych",
+      hours: 20
+    }
   ];
 
-    return(
-        <div>
-            <h1>Technologie</h1>
+  return (
+    <div>
+      <h1>Technologie</h1>
 
-            <h2>Pierwsza technologia</h2>
-            <p>ID: {technologies[0].id}</p>
-            <p>Nazwa: {technologies[0].name}</p>
-            <p>Kategoria: {technologies[0].category}</p>
-
-            <h2>Druga technologia</h2>
-            <p>ID: {technologies[1].id}</p>
-            <p>Nazwa: {technologies[1].name}</p>
-            <p>Kategoria: {technologies[1].category}</p>
-
-            <h2>Trzecia technologia</h2>
-            <p>ID: {technologies[2].id}</p>
-            <p>Nazwa: {technologies[2].name}</p>
-            <p>Kategoria: {technologies[2].category}</p>
-            
-        </div>
-    )
+      {technologies.map((technology) => (
+        <Technology 
+          key={technology.id}
+          id={technology.id}
+          name={technology.name}
+          category={technology.category}
+          hours={technology.hours}
+        />
+      ))}
+    </div>
+  );
 }
 
-export default Technologies
+export default Technologies;

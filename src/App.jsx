@@ -11,38 +11,17 @@ import InfoBox from "./components/InfoBox.jsx";
 import Navigation from "./components/Navigation.jsx"
 import CourseCard from "./components/CourseCard.jsx"
 import Technologies from "./components/Technologies.jsx"
+import Book from './components/Book.jsx'
+import Product from './components/Product.jsx'
 
 function App() {
 
-  const specification = {
-    language: "JavaScript",
-    type:"Frontend"
-  };
-
-  const features = [
-    {
-      comps: "Komponenty",
-    },
-    {
-      jsx:"JSX",
-    },
-    {
-      props:"props"
-    }
-  ];
-
-  return (
-    <>
-    
-    <Header/>
-    <br/>
-        <Technology name="React" category="frontend" hours={125} specyfikacja={specification} features={features}/>
-        <Technology name="PHP" category="backend" hours={200} specyfikacja={specification} features={features}/>
-        <Technology name="JavaScript" category="frontend" hours={150} specyfikacja={specification} features={features}/>
-        <Technology name="Angular" category="fromntend" hours={167} specyfikacja={specification} features={features}/>
-        <Technology name="MySQL" category="backend" hours={195} specyfikacja={specification} features={features}/>
-    </>
-  )
+return(
+    <div>
+      <h1>Produkt</h1>
+      <Product name="Laptop" price={3500} />
+    </div>
+  );
 }
 
-export default App
+export default App;

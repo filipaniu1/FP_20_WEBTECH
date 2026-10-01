@@ -1,9 +1,8 @@
-function Student() {
+function Student({ name, className }) {
   return (
     <div>
-        <h1>Filip Poreba</h1>
-        <p>4P</p>
-        <p>Programista</p>
+      <h3>{name}</h3>
+      <p>Klasa: {className}</p>
     </div>
   );
 }
