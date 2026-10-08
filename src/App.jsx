@@ -2,7 +2,7 @@ import React from 'react';
 import Technologies from './components/Technologies';
 
 
-function App() {
+function App() { 
 const technologies = [
 { id: 1, name: "React", category: "Frontend", hours: 30, image: "/images/react.webp" },
 { id: 2, name: "Node.js", category: "Backend", hours: 40, image: "/images/nodejs.webp" },
